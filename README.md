@@ -34,7 +34,7 @@
         </checksum>
         <URLBestand>https://www.example.com/bouwtekening-003.jpg</URLBestand>
         <isRepresentatieVan>
-            …
+            ...
     </bestand>
 </MDTO>
 ```
