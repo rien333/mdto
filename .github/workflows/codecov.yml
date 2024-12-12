@@ -13,8 +13,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 3
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,7 +32,7 @@ jobs:
       - name: Generate coverage
         run: |
           pytest
-          pytest --cov . --cov-report=xml
+          pytest --cov --cov-report=xml
 
       - name: Upload results to Codecov
         uses: codecov/codecov-action@v5
