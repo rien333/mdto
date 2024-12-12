@@ -33,6 +33,12 @@ jobs:
       - name: Run tests
         run: pytest --cov=. --cov-report=xml
 
+      - name: install tree
+        run: sudo apt-get install -y tree
+        
+      - name: List directory structure
+        run: tree
+
       - name: Upload results to Codecov
         uses: codecov/codecov-action@v5
         with:
