@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: 3.12
 
       - name: Set up go # for testing + installing siegfried-based PRONOM detection
         uses: actions/setup-go@v5
@@ -33,7 +33,8 @@ jobs:
 
       - name: Generate coverage
         run: |
-          pytest --cov --cov-report=xml
+          pytest
+          pytest --cov . --cov-report=xml
 
       - name: Upload results to Codecov
         uses: codecov/codecov-action@v5
