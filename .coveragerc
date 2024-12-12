@@ -1,0 +1,6 @@
+[coverage:run]
+source = mdto
+
+[coverage:report]
+show_missing = True
+skip_covered = True
